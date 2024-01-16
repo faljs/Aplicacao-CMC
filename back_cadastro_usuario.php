@@ -18,8 +18,8 @@ if (isset($_POST['nome']) && isset($_POST['usuario']) && isset($_POST['senha']))
     $sql = "INSERT INTO usuarios (nome, usuario, senha, token, email) VALUES ('$nome', '$usuario', '$senha', '$token',  '$email')";
 
     if (mysqli_query($conexao, $sql)) {
-        // Usuário cadastrado com sucesso
-        header("Location: listar_clientes.php");
+        // Usuário cadastrado com sucesso    // alterado de listar_clientes.php para listar_usuario
+        header("Location: cadastro_usuario.php"); 
     } else {
         // Erro ao cadastrar o usuário
         echo "Erro: " . mysqli_error($conexao);

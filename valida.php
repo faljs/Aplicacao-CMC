@@ -18,9 +18,7 @@ if (isset($_POST['usuario']) && isset($_POST['senha'])) {
         $_SESSION['usuarioNome'] = $resultado['nome'];
         $_SESSION['usuarioLogin'] = $resultado['usuario'];
         $_SESSION['usuarioSenha'] = $resultado['senha'];
-        // header("Location: listar_clientes.php"); alterado para dashboard.php
-        header("Location: inicio.php");
-
+        header("Location: listar_clientes.php");
     } else if ($resultado) {
         $_SESSION['usuarioToken'] = $token;
         $_SESSION['usuarioNome'] = $resultado['nome'];
@@ -33,8 +31,7 @@ if (isset($_POST['usuario']) && isset($_POST['senha'])) {
         $inserir_token = ("UPDATE usuarios SET token='$token' WHERE usuario = '$usuario' && senha = '$senha'");
         $resultado_token = mysqli_query($conexao, $inserir_token);
 
-      //  header("Location: listar_clientes.php"); alterador para dashboard.php
-          header("Location: inicio.php");
+        header("Location: inicio.php"); // se login estiver correto vai para esta tela
     } else {
         $_SESSION['loginErro'] = "Usuário ou senha Inválido";
         header("Location: login.php");

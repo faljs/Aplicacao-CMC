@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Enviar um e-mail com o link de redefinição
         $assunto = 'Redefinição de Senha';
         $mensagem = "Olá, para redefinir sua senha, clique no seguinte link: 
-        <a href='http://localhost:9000/cmc/redefinir_senha.php?token=$token'>Redefinir Senha</a>";
+        <a href='http://localhost:/cmc/redefinir_senha.php?token=$token'>Redefinir Senha</a>";
 
         mail($email, $assunto, $mensagem, 'Content-type: text/html; charset=utf-8');
 
@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['esqueciSenhaMensagem'] = 'O e-mail fornecido não está associado a uma conta válida.';
     }
 
-    header("Location: esqueci_senha.php");
+    header("Location: login.php");
     exit();
 }
 ?>
@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-      <link rel="shortcut icon" href="image/favicon.ico"/>
+<link rel="shortcut icon" href="image/favicon.ico"/>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
@@ -60,7 +60,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <!-- ==================================================== BUNDLE JS BOOTSTRAP ==================================================== -->
 
   <link href="https://getbootstrap.com/docs/5.1/examples/sign-in/signin.css" rel="stylesheet">
-    <!-- Seu cabeçalho HTML aqui -->
 </head>
 <body class="text-center">
     <main class="form-signin">

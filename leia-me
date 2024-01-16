@@ -1,0 +1,31 @@
+Alterado o arquivo cadastro_usuario.php
+foi colocado um mode nele mas nãofuncionou
+foi colocado uma mascara de cpf tambem não funciona
+os cadastros estao funcionando
+falta fazer o listar
+
+colocado o include conexao e segurança no menu.php
+
+alterado o back cad usuario para retornar para cadstro_usuario.php e não para listar_clientes.php
+
+
+o ecluir usuario é o mesmo excluir cliente?
+
+alterado na linha 80 listar usuario  de excluir cliente para excluir usuario
+                        //Mostra dentro da ul os resultado obtidos alterado de busca_clientes.php para busca_usuario.php
+linha 470 listar_usuario.php
+
+
+linha 527 processa_excluir_clientes.php  necessario criar um excuir usuario
+linha 762 processa_edit_clientes necessario criar um editar usuario
+linha 830 busca_clientes necessario criar um busca usuario
+
+
+a tela inicial depois do login esta no valida.php linha 34
+
+arquivo cmc_v3/listar_clientes.php separado em modal_editar_clientes.php, modal_visualizar_clientes.php, modal_cadastro_clientes.php e funcoes_mascaras.php, para uma melhor manutencao do codigo. No listar_clientes.php foram adicionados os links em php para chamar estes arquivos.
+
+adicionado ao cadastro_cliente.php o modal_cadastro_clientes.php, não ta salvando no banco
+para salva no banco é necessario adicionar o arquivo processa_cad_clientes.php
+
+edição de listar_usuario.php parado na linha 513
